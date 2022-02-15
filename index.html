@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>My Portfolio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> <!--google fonts-->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">   
+            <div class="nav-wrapper">
+                <div class="left-side">
+                    <div class="nav-link-wrapper active-nav-link">
+                        <a href="index.html">Home</a>
+                    </div>
+                    
+                    <div class="nav-link-wrapper">
+                        <a href="about.html">About</a>
+                    </div>
+                    
+                </div>
+                <div class="right-side">
+                    <div class="brand">
+                        <div>Ram Chamling Rai</div>
+                    </div>                    
+                </div>               
+            </div>   
+           
+            <div class="content-wrapper">
+                <div class="portfolio-items-wrapper">
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(images/background1.jpg)"></div>
+                        <div class="img-text-wrapper">
+                            <div class="logo-wrapper">
+                                <img src="images/img1.png">
+                            </div>
+                            <div class="subtitle">
+                                This is a test of a logo
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(images/background2.jpg)"></div>
+                        <div class="img-text-wrapper">
+                            <div class="logo-wrapper">
+                                <img src="images/img2.png">
+                            </div>
+                            <div class="subtitle">
+                                This is a test of a logo
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(images/background3.jpg)"></div>
+                        <div class="img-text-wrapper">
+                            <div class="logo-wrapper">
+                                <img src="images/img3.jpg">
+                            </div>
+                            <div class="subtitle">
+                                This is a test of a logo
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-wrapper">
+                        <div class="portfolio-img-background" style="background-image:url(images/background4.jpg)"></div>
+                        <div class="img-text-wrapper">
+                            <div class="logo-wrapper">
+                                <img src="images/img4.jpg">
+                            </div>
+                            <div class="subtitle">
+                                This is a test of a logo
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>      
+    </body>
+
+    <!--javascript-->
+    <script>
+        const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+        portfolioItems.forEach(portfolioItem => {
+            portfolioItem.addEventListener('mouseover', () => {
+                console.log(portfolioItem.childNodes[1].classList);
+                portfolioItem.childNodes[1].classList.add('img-darken');/* img-darken is called from the css*/
+            })
+
+            portfolioItem.addEventListener('mouseout', () => {
+                portfolioItem.childNodes[1].classList.remove('img-darken');/* img-darken is called from the css*/
+            })
+        })
+
+    </script>
+</html>
